@@ -6,10 +6,10 @@ const Goruntule = (props) => {
     return(<div id="displayContainer">
         <h1>Gönderilen:</h1>
 
-        { ad && <p data-testid="firstnameDisplay"><strong>Ad: </strong>{ad}</p> }
-        { soyad && <p data-testid="lastnameDisplay"> <strong>Soyad: </strong>{soyad}</p> }
-        { email && <p data-testid="emailDisplay"><strong>Email: </strong>{email}</p> }
-        { mesaj && <p data-testid="messageDisplay"><strong>Mesaj: </strong>{mesaj}</p> }
+        { ad && <p data-testid="firstnameDisplay">Ad:{ad}</p> }
+        { soyad && <p data-testid="lastnameDisplay">Soyad:{soyad}</p> }
+        { email && <p data-testid="emailDisplay">Email:{email}</p> }
+        { mesaj && <p data-testid="messageDisplay">Mesaj:{mesaj}</p> }
     </div>);
 };
 

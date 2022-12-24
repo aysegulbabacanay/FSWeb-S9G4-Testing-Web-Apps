@@ -70,7 +70,7 @@ const IletisimFormu = () => {
 
   return (
     <div className="App">
-      <h1>İletişim Formu</h1>
+      <h1 data-testid="form-title">İletişim Formu</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="ad">Ad*</label>
@@ -79,9 +79,10 @@ const IletisimFormu = () => {
             name="ad"
             value={form.ad}
             id="ad"
+            data-testid="isim-input"
             placeholder="İlhan"
           />
-          {(errors.ad) && <p data-testid="error">Hata: {errors.ad}</p>}
+          {(errors.ad) && <p data-testid="isim-error">Hata: {errors.ad}</p>}
         </div>
 
         <div>
@@ -89,11 +90,12 @@ const IletisimFormu = () => {
           <input
             onChange={handleChange}
             id="soyad"
+            data-testid="soyad-input"
             name="soyad"
             value={form.soyad}
             placeholder="Mansız"
           />
-          {(errors.soyad) && <p data-testid="error">Hata: {errors.soyad}</p>}
+          {(errors.soyad) && <p data-testid="soyad-error">Hata: {errors.soyad}</p>}
         </div>
 
         <div>
@@ -101,11 +103,12 @@ const IletisimFormu = () => {
           <input
             onChange={handleChange}
             id="email"
+            data-testid="mail-input"
             name="email"
             value={form.email}
             placeholder="yüzyılıngolcüsü@hotmail.com"
           />
-          {(errors.email) && <p data-testid="error">Hata: {errors.email}</p>}
+          {(errors.email) && <p data-testid="mail-error">Hata: {errors.email}</p>}
         </div>
 
         <div>
@@ -113,15 +116,16 @@ const IletisimFormu = () => {
           <input
             onChange={handleChange}
             name="mesaj"
+            data-testid="mesaj-input"
             id="mesaj"
             value={form.mesaj}
           />
-          {(errors.mesaj) && <p data-testid="error">Error: {errors.mesaj}</p>}
+          {(errors.mesaj) && <p data-testid="mesaj-error">Error: {errors.mesaj}</p>}
         </div>
 
         {displayData && <Goruntule form={form}/>}
 
-        <button>Gönder</button>
+        <button data-testid="submit-button" >Gönder</button>
       </form>
     </div>
   );
